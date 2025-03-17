@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e8e8e8;  /* Soft background color */
+    background-color: #e8e8e8; 
     margin: 0;
     padding: 0;
 }
@@ -194,7 +194,6 @@ img {
     margin-left: 8px;
 }
 
-/* Dark Mode/Light Mode */
 #white {
     background-color: #fff;
     border-radius: 50%;
@@ -212,7 +211,6 @@ img {
     padding: 5px;
 }
 
-/* Smooth transitions for color changes */
 * {
     transition: all 0.3s ease;
 }
