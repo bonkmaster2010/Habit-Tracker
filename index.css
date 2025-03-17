@@ -1,0 +1,218 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8e8e8;  /* Soft background color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; 
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+header > h2 {
+    font-size: 24px;
+    color: black; 
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.controls input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-right: 10px;
+    height: 35px;
+    width: 200px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.controls input:focus {
+    border-color: #4caf50;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    margin: 0 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.small-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.small-cont:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.small-cont h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.desc {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    max-height: 150px;
+    overflow: auto;
+    resize: vertical;
+    min-height: 50px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.edit {
+    padding: 8px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.edit:active {
+    transform: scale(1);
+}
+
+.delete,
+.done {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete {
+    background-color: #f44336;
+}
+
+.delete:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.delete:active {
+    transform: scale(1);
+}
+
+.done {
+    background-color: #4caf50;
+}
+
+.done:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.done:active {
+    transform: scale(1);
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+}
+
+.sidebar {
+    height: 150px;
+    width: 80px;
+}
+
+.sidebar button {
+    width: 30px;
+    height: 30px;
+}
+
+.colors {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.sidebar h2 {
+    margin-left: 8px;
+}
+
+/* Dark Mode/Light Mode */
+#white {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#black {
+    background-color: #282828;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#settings{
+    border: 1px solid #121212;
+    padding: 5px;
+}
+
+/* Smooth transitions for color changes */
+* {
+    transition: all 0.3s ease;
+}
