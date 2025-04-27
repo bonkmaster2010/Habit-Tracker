@@ -8,6 +8,46 @@ let settingIcon = document.getElementById("icon-setting");
 let isWhite = true; // Move this outside the function
 let show = false;
 
+let whitebtn = document.getElementById("white");
+let blackbtn = document.getElementById("black");
+let setbtn = document.getElementById("settings");
+
+blackbtn.addEventListener("click", function() {
+    isWhite = false;
+    setbtn.style.backgroundColor = "#282828"
+    setbtn.style.borderColor = "#f0f0f0"
+    document.querySelectorAll("header").forEach(hea => {
+        hea.style.backgroundColor = "#121212"
+    })
+    document.querySelectorAll("h2").forEach(p => {
+        p.style.color = "white"
+    })
+    document.querySelectorAll("div").forEach(div => {
+        div.style.backgroundColor = "#282828";
+        div.style.color = "white";
+    });
+
+    body.style.backgroundColor = "#1e1e1e";
+});
+
+whitebtn.addEventListener("click", function() {
+    isWhite = true;
+    setbtn.style.backgroundColor = "#f0f0f0";
+    setbtn.style.borderColor = "#121212"
+    document.querySelectorAll("header").forEach(hea => {
+        hea.style.backgroundColor = "#f0f0f0"
+    })
+    document.querySelectorAll("h2").forEach(p => {
+        p.style.color = "black"
+    })
+    document.querySelectorAll("div").forEach(div => {
+        div.style.backgroundColor = "white";
+        div.style.color = "black";
+    });
+    body.style.backgroundColor = "#e8e8e8";
+});
+
+
 // Load existing habits from localStorage
 window.addEventListener("load", function() {
     let storedHabits = JSON.parse(localStorage.getItem("habits")) || [];
@@ -89,7 +129,7 @@ function createHabitElement(name, description) {
         let storedHabits = JSON.parse(localStorage.getItem("habits")) || [];
         storedHabits = storedHabits.filter(habit => habit.name !== name);
         localStorage.setItem("habits", JSON.stringify(storedHabits));
-
+                           
         cont.remove();
     });
 
@@ -100,6 +140,12 @@ function createHabitElement(name, description) {
 
         cont.remove();
     });
+
+    if (!isWhite) {
+        cont.style.backgroundColor = "#282828";
+        nameElement.style.color = "white";
+
+    }
 }
 
 /* Settings */
@@ -116,41 +162,3 @@ settings.addEventListener("click", function() {
     }
 });
 
-/* Dark Mode Toggle */
-let whitebtn = document.getElementById("white");
-let blackbtn = document.getElementById("black");
-let setbtn = document.getElementById("settings");
-
-blackbtn.addEventListener("click", function() {
-    isWhite = false;
-    setbtn.style.backgroundColor = "#282828"
-    setbtn.style.borderColor = "#f0f0f0"
-    document.querySelectorAll("header").forEach(hea => {
-        hea.style.backgroundColor = "#121212"
-    })
-    document.querySelectorAll("h2").forEach(p => {
-        p.style.color = "white"
-    })
-    document.querySelectorAll("div").forEach(div => {
-        div.style.backgroundColor = "#282828";
-        div.style.color = "white";
-    });
-    body.style.backgroundColor = "#1e1e1e";
-});
-
-whitebtn.addEventListener("click", function() {
-    isWhite = true;
-    setbtn.style.backgroundColor = "#f0f0f0";
-    setbtn.style.borderColor = "#121212"
-    document.querySelectorAll("header").forEach(hea => {
-        hea.style.backgroundColor = "#f0f0f0"
-    })
-    document.querySelectorAll("h2").forEach(p => {
-        p.style.color = "black"
-    })
-    document.querySelectorAll("div").forEach(div => {
-        div.style.backgroundColor = "white";
-        div.style.color = "black";
-    });
-    body.style.backgroundColor = "#e8e8e8";
-});

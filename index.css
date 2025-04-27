@@ -26,17 +26,13 @@ header > h2 {
     justify-content: center;
     align-self: center;
     margin-bottom: 15px;
+    gap: 10px;
 }
 
-.controls input {
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    margin-right: 10px;
-    height: 35px;
-    width: 200px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+.controls input{
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
 }
 
 .controls input:focus {
@@ -102,6 +98,24 @@ header > h2 {
     justify-content: space-between;
     gap: 15px;
     width: 100%;
+}
+
+button{
+    color: white;
+}
+
+#add{
+    border-radius: 6px;
+    width: 60px;
+    padding: 4px 12px;
+    border: none;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    cursor: pointer;
+}
+
+#add:hover{
+  background-color: rgb(17, 132, 226);
 }
 
 .edit {
